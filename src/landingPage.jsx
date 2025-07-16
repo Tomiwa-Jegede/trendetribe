@@ -9,7 +9,7 @@ import Button from './Button';
 const LandingPage = () => {
   return (
     <>
-      <div className=" mt-[3rem] flex h-[100dvh] flex-col items-center justify-center text-center">
+      <div className=" pt-[3rem] flex h-[100dvh] flex-col items-center justify-center text-center">
         {/*--render slogan here------*/}
         <h1 className="z-10 mb-[2rem] lg:mb-[0rem] origin-bottom overflow-hidden text-[3.5rem] text-white md:text-[5rem] lg:text-[3.5rem]">
           Online <br />
