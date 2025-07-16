@@ -31,7 +31,7 @@ const CartBtnComponent = ({ label = '', id }) => {
 
   return (
     <button
-      className="bg-secondary-color m-1 flex h-[1.2rem] w-[1.2rem] items-center justify-center rounded-[50px] border border-none p-3 text-white"
+      className="bg-secondary-color m-1 flex h-[1.2rem] w-[1.2rem] items-center justify-center rounded-[50px] border border-none p-3 text-white md:p-[1.2rem]"
       onClick={handleClick}
     >
       {label}

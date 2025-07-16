@@ -15,17 +15,19 @@ const AccountNumber = ({ total = '' }) => {
   //handleIHavePaid
   const handlePaid = () => {
     if (location.pathname === '/accForProduct') {
-      cartItems.map((item) => {
-        const phoneNum = '09166635320';
-        const message = `*PLAN*\n I would like the ${item.name}\nTotal:${item.price}`;
-        const encodedMessage = encodeURIComponent(message);
-        const whatsApp = `https://wa.me/${phoneNum}?text=${encodedMessage}`;
-        window.open(whatsApp, '_blank');
+      const phoneNum = '09166635320';
+      const order = '*Your Order*\n';
+      const message = cartItems.map((item) => {
+        const message = `${item.name} - X${item.quantity}\nTotal: ₦${item.price}`;
+        return message;
       });
+      const encodedMessage = encodeURIComponent(order + message);
+      const whatsApp = `https://wa.me/${phoneNum}?text=${encodedMessage}`;
+      window.open(whatsApp, '_blank');
     } else {
       vendorCart.map((item) => {
         const phoneNum = '09166635320';
-        const message = `*PLAN*\n I would like the ${item.name}\nTotal:${item.price}`;
+        const message = `*PLAN*\n I would like the ${item.name}\nTotal: ₦${item.price}`;
         const encodedMessage = encodeURIComponent(message);
         const whatsApp = `https://wa.me/${phoneNum}?text=${encodedMessage}`;
         window.open(whatsApp, '_blank');

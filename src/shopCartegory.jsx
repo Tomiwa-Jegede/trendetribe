@@ -14,7 +14,7 @@ const ShopCartegory = () => {
       <div className="bg-[url(./assets/hero-section-mobile.png)]">
         {/*--------This is the code for the categories------*/}
         <div className="before:content-'' h-[100dvh] before:absolute before:inset-0 before:z-[0] before:bg-black before:opacity-[0.7]">
-          <div className="grid grid-cols-2 items-start justify-items-center pt-[3.5rem]">
+          <div className="grid grid-cols-2 items-start justify-items-center pt-[3.5rem] md:grid-cols-3 md:pt-[7.5rem]">
             {/*------looped throuhg the cartegories to get the cartegorys--------*/}
             {categoriesContainer.map((categorie) => {
               {

@@ -6,13 +6,13 @@ import { VendorCartContent } from './cartContent';
 const Price = () => {
   const { handleClick } = useContext(VendorCartContent);
   return (
-    <div className="relative grid grid-cols-1 justify-center gap-y-4 border bg-[url(./assets/hero-section-mobile.png)] p-2 pt-[4.5rem] before:absolute before:inset-0 before:z-0 before:border before:bg-black before:p-[1rem] before:opacity-[0.7] before:content-['']">
+    <div className="relative grid grid-cols-1 justify-center gap-y-4 border bg-[url(./assets/hero-section-mobile.png)] p-2 pt-[4.5rem] before:absolute before:inset-0 before:z-0 before:border before:bg-black before:p-[1rem] before:opacity-[0.7] before:content-[''] md:pt-[8rem]">
       {vendorPlans.map((item) => (
         <ul
           key={item.id}
-          className="border-primary-color bg-secondary-color z-1 list-outside list-disc border p-2 pl-6 text-white"
+          className="border-primary-color bg-secondary-color z-1 list-outside list-disc border p-2 pl-6 text-white md:pl-8 md:text-[1.5rem]"
         >
-          <li className="text-primary-color flex items-center justify-center border-b p-2 text-2xl">
+          <li className="text-primary-color md:text-[2rem] flex items-center justify-center border-b p-2 text-2xl">
             {item.name}
           </li>
           <li className="list-none p-2 text-center">

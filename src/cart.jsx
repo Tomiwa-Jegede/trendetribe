@@ -22,13 +22,13 @@ const CartPage = () => {
   );
   return (
     <>
-      <div className="h-[100dvh] pt-[5rem]">
+      <div className="h-[100dvh] pt-[5rem] md:pt-[8rem]">
         {/*-------------cart nav bar--------------*/}
-        <nav className="text-secondary-color flex justify-center text-[2rem]">
+        <nav className="text-secondary-color flex justify-center text-[1.5rem] md:text-[3rem]">
           Cart
         </nav>
         <nav
-          className={`${cartItems.length === 0 ? 'flex' : 'hidden'} text-secondary-color flex justify-center text-[2rem]`}
+          className={`${cartItems.length === 0 ? 'flex' : 'hidden'} text-secondary-color flex justify-center text-[2rem] md:text-[3rem]`}
         >
           Your Cart Is Empty
         </nav>
@@ -38,7 +38,7 @@ const CartPage = () => {
           className={`${cartItems.length === 0 ? 'hidden' : 'flex'} flex-col`}
         >
           {/*-------------cart header--------------*/}
-          <ul className="grid grid-cols-5 place-items-center border border-[#00000054]">
+          <ul className="grid grid-cols-5 place-items-center border border-[#00000054] md:text-[2rem]">
             <li>Product</li>
             <li>Price</li>
             <li>Quantity</li>
@@ -52,7 +52,7 @@ const CartPage = () => {
             //returns the products in the cart
             return (
               <React.Fragment key={item.id}>
-                <ul className="grid grid-cols-5 place-items-center border border-[#0000001c] p-2">
+                <ul className="grid grid-cols-5 place-items-center border border-[#0000001c] p-2 md:text-[1.8rem]">
                   {/*----cart product image---*/}
                   <li className="flex items-center justify-center">
                     <img src={imgSrc} alt="" />
@@ -87,19 +87,25 @@ const CartPage = () => {
           className={`${cartItems.length === 0 ? 'hidden' : 'flex'} items-center p-2`}
         >
           <ul className="w-full">
-            <li className="text-secondary-color border-[#0000001c border] flex items-center justify-center border border-[#0000001c] p-2 text-3xl">
+            <li className="text-secondary-color border-[#0000001c border] flex items-center justify-center border border-[#0000001c] p-2 text-3xl md:text-[3rem]">
               Order Summary
             </li>
-            <li className="border border-[#0000001c] p-2 text-[1.2rem]">
-              <span className="text-secondary-color text-xl">Sub-Total: </span>
+            <li className="border border-[#0000001c] p-2 text-[1.2rem] md:text-[1.8rem]">
+              <span className="text-secondary-color text-xl md:text-[2rem]">
+                Sub-Total:{' '}
+              </span>
               &#8358;{total}
             </li>
-            <li className="border border-[#0000001c] p-2 text-[1.2rem]">
-              <span className="text-secondary-color text-xl">Shipping: </span>
+            <li className="border border-[#0000001c] p-2 text-[1.2rem] md:text-[1.8rem]">
+              <span className="text-secondary-color text-xl md:text-[2rem]">
+                Shipping:{' '}
+              </span>
               Pickup ONLY
             </li>
-            <li className="border border-[#0000001c] p-2 text-[1.2rem]">
-              <span className="text-secondary-color text-xl">Total: </span>
+            <li className="border border-[#0000001c] p-2 text-[1.2rem] md:text-[1.8rem]">
+              <span className="text-secondary-color text-xl md:text-[2rem]">
+                Total:{' '}
+              </span>
               &#8358;{total}
             </li>
             <li className="text-secondary-color flex items-center justify-center border border-[#0000001c] p-2">

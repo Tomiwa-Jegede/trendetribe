@@ -14,16 +14,16 @@ const ProductContainer = ({
 
   //return the product container
   return (
-    <div className="flex w-fit flex-col items-center rounded-[5px] bg-[#0000001f] p-2">
+    <div className="flex w-fit flex-col items-center rounded-[5px] bg-[#0000001f] p-2 md:p-5">
       {/*------------product Image---------------*/}
       <img
-        className="mb-2 h-[10rem] w-[10rem] rounded-[5px] object-cover"
+        className="mb-2 h-[10rem] w-[10rem] md:h-[13rem] md:w-[13rem] rounded-[5px] object-cover"
         src={image}
         alt=""
       />
 
       {/*This is a div to wrap the product(name, price & availibility) */}
-      <div className="text-secondary-color mb-2 w-full text-[1.1rem]">
+      <div className="text-secondary-color mb-2 w-full text-[1.1rem] md:text-[1.5rem]">
         {/*----------------------product Name-----------------*/}
         <div className="mb-1">{name}</div>
 
@@ -41,7 +41,7 @@ const ProductContainer = ({
         }}
         color="white"
         label="ADD TO CART"
-        background='secondary-color'
+        background="secondary-color"
       />
     </div>
   );

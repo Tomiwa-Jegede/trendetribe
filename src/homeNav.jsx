@@ -31,11 +31,14 @@ const HomeNav = ({
     <>
       {/*--------This is the code for the navBar------*/}
       <nav
-        className={`${content === 'TRENDEE TRIBE' ? 'animate-fadeIn' : 'animate-none'} text-${color}  fixed z-50 flex w-full origin-bottom justify-between p-[1rem] bg-${background}`}
+        className={`md:text-[2rem] ${content === 'TRENDEE TRIBE' ? 'animate-fadeIn' : 'animate-none'} text-${color} fixed z-50 flex w-full origin-bottom justify-between p-[1rem] md:p-[2rem] bg-${background}`}
       >
-        <div className="flex  items-center justify-between text-[1.3rem]">
+        <div className="flex items-center justify-between text-[1.3rem] md:text-[1.8rem]">
           {/*--------backIcon------*/}
-          <div className={`${icon === '' ? 'hidden' : 'flex'} mr-3`} onClick={back}>
+          <div
+            className={`${icon === '' ? 'hidden' : 'flex'} mr-3`}
+            onClick={back}
+          >
             {icon}
           </div>
           {content}
@@ -47,7 +50,7 @@ const HomeNav = ({
           {/*--------cartIcon------*/}
           <div className="relative">
             <div
-              className={`${cartIcon ? 'flex' : 'hidden'} bg-primary-color text-secondary-color absolute top-[-.7rem] right-[-.5rem] flex h-[1rem] w-[1rem] items-center justify-center rounded-[1rem] p-[.5rem] text-[.8rem]`}
+              className={`${cartIcon ? 'flex' : 'hidden'} bg-primary-color text-secondary-color absolute top-[-.7rem] right-[-.5rem] flex h-[1rem] w-[1rem] items-center justify-center rounded-[1rem] p-[.5rem] text-[.8rem] md:p-[.8rem] md:text-[1.5rem]`}
             >
               {cart.length || 0}
             </div>
@@ -119,9 +122,8 @@ const HomeNav = ({
                 setDropDown(false);
               }}
             >
-              <Link to='/pricing'>
-                Pricing
-                <FontAwesomeIcon icon={faMoneyBill1Wave} />
+              <Link to="/pricing">
+                Pricing <FontAwesomeIcon icon={faMoneyBill1Wave} />
               </Link>
             </li>
           </ul>

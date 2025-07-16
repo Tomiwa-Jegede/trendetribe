@@ -6,7 +6,7 @@ const Button = ({
   label = 'ADD TO CART',
   addedLabel = 'ADDED',
   sublabel = '',
-  background='white',
+  background = 'white',
   color = '',
   onClick = () => {},
 }) => {
@@ -24,7 +24,9 @@ const Button = ({
   return (
     <button
       onClick={handleClick}
-      className={`bg-${background} rounded-[10px] border p-[.5rem] px-[2rem] text-[.9rem] text-${color}`}
+      className={`bg-${background} rounded-[10px] border px-[2rem] py-[.5rem] text-[.9rem] md:px-[2rem] md:py-[.8rem] md:text-[1.2rem] ${
+        color === 'black' ? 'text-black' : ''
+      } ${color === 'primary-color' ? 'text-primary-color' : ''} ${color === 'white' ? 'text-white' : ''}`}
     >
       {!isClicked ? label : addedLabel}
       <br />
