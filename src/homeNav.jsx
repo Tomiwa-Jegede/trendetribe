@@ -1,7 +1,7 @@
 // all import are decleared here
 import React from 'react';
 import { useState, useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
@@ -19,6 +19,8 @@ const HomeNav = ({
   color = '',
   background = '',
 }) => {
+  const location=useLocation()
+
   //used useState to open and close the  dropdown nav
   const [dropDown, setDropDown] = useState(false);
   //access the content in the cart with cartContent
@@ -31,9 +33,11 @@ const HomeNav = ({
     <>
       {/*--------This is the code for the navBar------*/}
       <nav
-        className={`md:text-[2rem] ${content === 'TRENDEE TRIBE' ? 'animate-fadeIn' : 'animate-none'} text-${color} fixed z-50 flex w-full origin-bottom justify-between p-[1rem] md:p-[2rem] bg-${background}`}
+        className={`md:text-[2rem] ${content === 'TRENDEE TRIBE' ? 'animate-fadeIn' : 'animate-none'} text-${color} fixed z-50 flex w-full origin-bottom items-center justify-between p-[1rem] md:p-[2rem] lg:p-[1.5rem] bg-${background} lg:text-[1.5rem]`}
       >
-        <div className="flex items-center justify-between text-[1.3rem] md:text-[1.8rem]">
+        <div
+          className={`flex items-center justify-between text-[1.3rem] md:text-[1.8rem] lg:w-[12rem] lg:text-[1.3rem]`}
+        >
           {/*--------backIcon------*/}
           <div
             className={`${icon === '' ? 'hidden' : 'flex'} mr-3`}
@@ -42,6 +46,24 @@ const HomeNav = ({
             {icon}
           </div>
           {content}
+        </div>
+        <div>
+          <ul
+            className={`item-center mx-[2rem] hidden w-[30rem] justify-between lg:flex  lg:ease-in-out lg:duration-500`}
+          >
+            <Link to="/">
+              <li className={`${location.pathname==='/'?'hover:text-white':'hover:text-primary-color'}`}>Home</li>
+            </Link>
+            <Link to="/cart">
+              <li className={`${location.pathname==='/'?'hover:text-white':'hover:text-primary-color'}`}>Cart</li>
+            </Link>
+            <Link to="/shopCartegory">
+              <li className={`${location.pathname==='/'?'hover:text-white':'hover:text-primary-color'}`}>Shop</li>
+            </Link>
+            <Link to="/pricing">
+              <li className={`${location.pathname==='/'?'hover:text-white':'hover:text-primary-color'}`}>Pricing</li>
+            </Link>
+          </ul>
         </div>
         {/*--------cart & menu container------*/}
         <div
@@ -58,6 +80,7 @@ const HomeNav = ({
           </div>
           {/*--------barIcon------*/}
           <div
+            className="lg:hidden"
             onClick={() => {
               setDropDown(true);
             }}

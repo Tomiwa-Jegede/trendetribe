@@ -14,7 +14,7 @@ const ProductContainer = ({
 
   //return the product container
   return (
-    <div className="flex w-fit flex-col items-center rounded-[5px] bg-[#0000001f] p-2 md:p-5">
+    <div className="flex w-fit md:w-[15rem] flex-col items-center rounded-[5px] bg-[#0000001f] p-2 md:p-5">
       {/*------------product Image---------------*/}
       <img
         className="mb-2 h-[10rem] w-[10rem] md:h-[13rem] md:w-[13rem] rounded-[5px] object-cover"

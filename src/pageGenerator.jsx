@@ -16,7 +16,7 @@ const PageGenerator = ({ products = [] }) => {
         Featured Products
       </h1>
       {/*------wrap all the generated product here------*/}
-      <div className="md:grid-cols-3 grid grid-cols-2  items-start justify-items-center gap-2 p-2">
+      <div className="md:grid-cols-3 lg:grid-cols-4 grid grid-cols-2  items-start justify-items-center gap-2 p-2">
         {/*----looped through the products to get all the poducts in the folder*/}
         {products.map((product) => {
           {/*-----imported the image so that react can use it-------*/}

@@ -9,9 +9,9 @@ import Button from './Button';
 const LandingPage = () => {
   return (
     <>
-      <div className="flex h-[100dvh] flex-col items-center justify-center text-center">
+      <div className=" mt-[3rem] flex h-[100dvh] flex-col items-center justify-center text-center">
         {/*--render slogan here------*/}
-        <h1 className="z-10 mb-[2rem] origin-bottom overflow-hidden text-[3.5rem] text-white md:text-[5rem]">
+        <h1 className="z-10 mb-[2rem] lg:mb-[0rem] origin-bottom overflow-hidden text-[3.5rem] text-white md:text-[5rem] lg:text-[3.5rem]">
           Online <br />
           <span className="bg-secondary-color animate-slant inline-block rounded-[50px] px-[1.5rem] text-white opacity-0">
             Marketplace
@@ -22,7 +22,7 @@ const LandingPage = () => {
           Fingertip
         </h1>
         {/*--render sub-slogan here------*/}
-        <h4 className="text-primary-color z-10 mb-[2rem] text-[1.3rem] md:text-[1.7rem]">
+        <h4 className="text-primary-color z-10 lg:mb-[1rem] mb-[2rem] text-[1.3rem] md:text-[1.7rem]">
           Your Ultimate Shopping Experience Minus The Crowds.
         </h4>
         {/*--wrap button here------*/}
@@ -47,7 +47,7 @@ const LandingPage = () => {
           </Link>
         </div>
         {/*--render social-media icons here--*/}
-        <div className="text-primary-color z-10 flex w-[20%] justify-between text-[2rem] md:w-[18%] md:text-[3rem]">
+        <div className="text-primary-color z-10 flex w-[20%] justify-between text-[2rem] md:w-[18%] md:text-[3rem] lg:hidden">
           <FontAwesomeIcon icon={faInstagram} />
           <FontAwesomeIcon icon={faWhatsapp} />
         </div>
