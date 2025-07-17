@@ -8,7 +8,7 @@ const Input = () => {
       onChange={handleChange}
       type="text"
       placeholder="Search products..."
-      className="border-secondary-color outline-secondary-color mb-[.5rem] w-[20rem] rounded-[5px] border p-2 md:text-[1.5rem] lg:w-[30rem] lg:text-[2rem]"
+      className="border-secondary-color outline-none lg:outline-secondary-color mb-[.5rem] w-[20rem] rounded-[5px] border p-2 md:text-[1.5rem] lg:w-[30rem] lg:text-[2rem]"
     />
   );
 };
