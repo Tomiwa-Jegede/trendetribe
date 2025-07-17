@@ -13,7 +13,7 @@ const PageGenerator = () => {
   return (
  
       //used a div to wrap all the content that are present on the page
-      <div className="flex h-[100dvh] flex-col items-center pt-[3.5rem] md:pt-[7rem] lg:pt-[5rem]">
+      <div className="flex h-[100dvh] flex-col items-center pt-[5rem] md:pt-[8rem] lg:pt-[8rem]">
         <Input />
         {/*--------this is the header of the page-------*/}
         <h1 className="text-secondary-color pb-[1rem] text-center text-[1.5rem] md:text-[2rem]">
