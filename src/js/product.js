@@ -1,5 +1,5 @@
 export const products = [{
-  name: 'Blue Scruchie',
+  name: 'Blue Scrunchie',
   img: '/src/assets/scrunchie/Blue-Scrunchie.jpg',
   id: '1',
   price: '2000',

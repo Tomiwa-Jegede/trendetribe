@@ -11,6 +11,7 @@
   --animate-fadeIn02: fadeIn02 1s 1s ease-in-out forwards;
   --animate-slant: slant 1s 0.5s ease-in-out forwards;
 }
+
 /*--keyframe for the 1st fade in---*/
 @keyframes fadeIn01 {
   0% {

@@ -3,3 +3,4 @@ import { createContext } from 'react';
 //saved the components in the cart with createContext
 export const CartContent = createContext();
 export const VendorCartContent = createContext();
+export const SearchContent = createContext();

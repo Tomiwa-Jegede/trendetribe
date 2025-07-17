@@ -12,6 +12,7 @@ import Price from './price';
 import VendorPlansCart from './vendorPlansCart';
 import AccountForPlan from './accForPlan';
 import AccountForProducts from './accForProduct';
+import Search from './Search';
 
 const App = () => {
   return (
@@ -23,17 +24,32 @@ const App = () => {
             <Route path="/" element={<Home />} />
             <Route element={<Layout />}>
               <Route path="/shopCartegory" element={<ShopCartegory />} />
+
               <Route
                 path="/fashion"
-                element={<PageGenerator state="Fashion" products={products} />}
+                element={
+                  <Search currentProduct={products}>
+                    {' '}
+                    <PageGenerator state="Fashion" products={products} />{' '}
+                  </Search>
+                }
               />
+
               <Route
                 path="/jersy"
-                element={<PageGenerator products={jersey} />}
+                element={
+                  <Search currentProduct={jersey}>
+                    <PageGenerator products={jersey} />{' '}
+                  </Search>
+                }
               />
               <Route
                 path="/accessories"
-                element={<PageGenerator products={accessories} />}
+                element={
+                  <Search currentProduct={accessories}>
+                    <PageGenerator products={accessories} />{' '}
+                  </Search>
+                }
               />
               <Route path="/cart" element={<CartPage />} />
               <Route path="/accForProduct" element={<AccountForProducts />} />
