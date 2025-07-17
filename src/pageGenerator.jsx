@@ -11,7 +11,7 @@ const images = import.meta.glob('/src/assets/**/*.{jpg,jpeg,png}', {
 const PageGenerator = () => {
   const { SearchResults } = useContext(SearchContent);
   return (
-    <>
+ 
       //used a div to wrap all the content that are present on the page
       <div className="flex h-[100dvh] flex-col items-center pt-[3.5rem] md:pt-[7rem] lg:pt-[5rem]">
         <Input />
@@ -41,7 +41,6 @@ const PageGenerator = () => {
           })}
         </div>
       </div>
-    </>
   );
 };
 export default PageGenerator;
