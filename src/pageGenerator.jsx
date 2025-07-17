@@ -1,9 +1,8 @@
 //rendered all the imports
 import React, { useContext } from 'react';
 import ProductContainer from './productContainer.jsx';
-import Cart from './cartContainer.jsx';
-import Input from './input.jsx';
 import { SearchContent } from './cartContent.jsx';
+import Input from './input.jsx';
 const images = import.meta.glob('/src/assets/**/*.{jpg,jpeg,png}', {
   eager: true,
   import: 'default',
